@@ -8,4 +8,14 @@ document.addEventListener('click', (e)=>{
   if(e.target.id !== 'top-menu' && e.target.id !== 'toggle-bar'){
     menuBar.classList.remove('active')
   }
+});
+//scroll nav
+const header = document.getElementById('header')
+window.addEventListener('scroll',()=>{
+if(scrollY > 50){
+header.classList.add('active')
+}
+else{
+  header.classList.remove('active')
+}
 })
