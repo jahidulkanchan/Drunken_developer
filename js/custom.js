@@ -12,7 +12,7 @@ document.addEventListener('click', (e)=>{
 //scroll nav
 const header = document.getElementById('header')
 window.addEventListener('scroll',()=>{
-if(scrollY > 50){
+if(scrollY > 200){
 header.classList.add('active')
 }
 else{

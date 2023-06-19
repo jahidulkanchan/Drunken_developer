@@ -15,16 +15,38 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
-@media(max-width: 768px){
-body header nav ul{
-  display: none;
-}
-body #nav-toggle {
-  margin-top: 5px;
-}
-body header #nav-toggle {
-  display: block;
-}
+
+@media (max-width: 768px) {
+  body header nav ul {
+    flex-direction: column;
+    margin-top: 79px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 260px;
+    transform: scaleY(0);
+    transform-origin: top;
+    background-color: #989898;
+    z-index: 999;
+    transition: 0.3s ease;
+  }
+  body header.active nav ul {
+    background-color: #ffffff;
+  }
+  body header nav ul li {
+    margin: 10px 0px;
+  }
+  body nav #top-menu.active {
+    transform: scaleY(1);
+  }
+  body #nav-toggle {
+    margin-top: 5px;
+  }
+  body header #nav-toggle {
+    display: block;
+  }
 }
 header {
   width: 100%;
@@ -33,7 +55,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: .2s ease;
+  transition: 0.2s ease;
   z-index: 999999999;
 }
 #header.active {
@@ -41,7 +63,8 @@ header {
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #00000045;
 }
-#header.active .logo a,#header.active nav ul li a{
+#header.active .logo a,
+#header.active nav ul li a {
   color: #000000;
 }
 header .container {
@@ -58,7 +81,7 @@ header .logo img {
   margin-top: -10px;
   width: 30px;
 }
-header .logo:hover  a{
+header .logo:hover a {
   color: #dadada;
 }
 header nav ul {
@@ -72,9 +95,9 @@ header nav ul li {
 header nav ul li a {
   font-weight: 600;
   padding: 2px 10px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-header nav ul li a:hover{
+header nav ul li a:hover {
   color: #dadada;
 }
 #nav-toggle {
@@ -88,8 +111,8 @@ header nav ul li a:hover{
 }
 #nav-toggle #toggle-bar {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   opacity: 0;
   z-index: 2;
   cursor: pointer;
@@ -123,15 +146,54 @@ header nav ul li a:hover{
 #nav-toggle .bar::after {
   top: 12px;
 }
-.banner-top img{
+.banner-top img {
   width: 100%;
 }
 
-.banner-top{
+.banner-top {
   background-color: #989898;
+  min-height: 700px;
+  background-image: url(../images/banner-top-bg.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.section{
+
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.top-text {
+  color: #ffffff;
+  z-index: -1;
+}
+
+.section {
   padding: 50px 0px;
   min-height: 600px;
-  background-color: #eeeeee;
 }
