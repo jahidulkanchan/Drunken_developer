@@ -19,3 +19,5 @@ else{
   header.classList.remove('active')
 }
 })
+// wow js
+new WOW().init();

@@ -15,6 +15,9 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
+img{
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   body header nav ul {
@@ -193,7 +196,13 @@ header nav ul li a:hover {
   z-index: -1;
 }
 
-.section {
+.about-section{
   padding: 50px 0px;
-  min-height: 600px;
+  min-height: 500px;
+  overflow-x: hidden;
+}
+.project-section{
+  padding: 0px 0px;
+  min-height: 500px;
+  overflow-x: hidden;
 }
