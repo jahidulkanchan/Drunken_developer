@@ -15,7 +15,7 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
-img{
+img {
   width: 100%;
 }
 
@@ -196,12 +196,12 @@ header nav ul li a:hover {
   z-index: -1;
 }
 
-.about-section{
+.about-section {
   padding: 50px 0px;
   min-height: 500px;
   overflow-x: hidden;
 }
-.project-section{
+.project-section {
   padding: 0px 0px;
   min-height: 500px;
   overflow-x: hidden;
