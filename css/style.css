@@ -170,9 +170,11 @@ header nav ul li a:hover {
   background-size: 200%;
   background-position-x: -15%;
   overflow: hidden;
-  animation: animate-bg 3s linear 0s normal infinite;
+  -webkit-animation: animate-bg 3s linear 0s normal infinite;
+          animation: animate-bg 3s linear 0s normal infinite;
   color: transparent;
   -webkit-background-clip: text;
+          background-clip: text;
 }
 @keyframes animate-bg {
   
