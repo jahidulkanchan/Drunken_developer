@@ -175,6 +175,7 @@ header nav ul li a:hover {
   -webkit-background-clip: text;
 }
 @keyframes animate-bg {
+  
   0% {
     background-position-x: 200%;
   }
