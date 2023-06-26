@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 ul {
@@ -19,7 +19,15 @@ a {
 img {
   width: 100%;
 }
+h1 u{
+color: #de2c00;
+}
 
+@media (max-width: 992px) {
+  body .banner-top {
+    background-size: cover;
+  }
+}
 @media (max-width: 768px) {
   body header nav ul {
     flex-direction: column;
@@ -33,7 +41,7 @@ img {
     transform: scaleY(0);
     transform-origin: top;
     background-color: #989898;
-    z-index: 999;
+    z-index: 99999;
     transition: 0.3s ease;
   }
   body header.active nav ul {
@@ -101,7 +109,8 @@ header nav ul li a {
   padding: 2px 10px;
   transition: 0.3s ease;
 }
-header nav ul li a.active,#header.active nav ul li a.active {
+header nav ul li a.active,
+#header.active nav ul li a.active {
   color: #dadada;
 }
 header nav ul li a:hover {
@@ -161,9 +170,9 @@ header nav ul li a:hover {
   background-color: #989898;
   min-height: 700px;
   background-image: url(../images/banner-top-bg.svg);
-  background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
 }
 .banner-top .top-text {
   z-index: -1;
@@ -172,13 +181,12 @@ header nav ul li a:hover {
   background-position-x: -15%;
   overflow: hidden;
   -webkit-animation: animate-bg 3s linear 0s normal infinite;
-          animation: animate-bg 3s linear 0s normal infinite;
+  animation: animate-bg 3s linear 0s normal infinite;
   color: transparent;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 @keyframes animate-bg {
-  
   0% {
     background-position-x: 200%;
   }
@@ -191,28 +199,53 @@ header nav ul li a:hover {
   padding: 50px 0px;
   min-height: 500px;
   overflow-x: hidden;
+  color: #ffffff;
+  background-color: #989898;
 }
 .project-section {
-  padding: 0px 0px;
+  padding: 100px 0px 50px 0px;
   min-height: 500px;
+  color: #ffffff;
+  background-color: #989898;
   overflow-x: hidden;
 }
-/* ----------Tv-channel--------- */
-.tv-section{
- min-height: 600px;
+.contact-section {
+  min-height: 300px;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #989898;
 }
-.tv-section .card{
+.contact-form input {
+  padding: 8px 10px;
+  outline: none;
+  border: #989898;
+}
+.contact-form input[type="submit"] {
+  background-color: #38364a;
+  padding: 8px 25px;
+}
+/* ---------footer-------- */
+footer{
+  background-color: #989898;
+}
+/* ----------Tv-channel--------- */
+.tv-section {
+  min-height: 600px;
+}
+.tv-section .card {
   min-height: 200px;
   border-radius: 10px;
   background-color: #989898;
   -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
   box-shadow: 0px 0px 15px #b7b7b77f;
- }
-.tv-section .card>img{
+}
+.tv-section .card > img {
   max-height: 150px;
- }
- .tv-section .card a{
+}
+.tv-section .card a {
   display: inline-block;
   margin-top: 20px;
   padding: 5px 20px;
@@ -220,9 +253,9 @@ header nav ul li a:hover {
   color: #000000;
   background-color: #ffffff;
   border: 1px solid black;
-  transition: .2s ease;
- }
- .tv-section .card a:hover{
+  transition: 0.2s ease;
+}
+.tv-section .card a:hover {
   background-color: #000000;
   color: #ffffff;
- }
+}
